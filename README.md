@@ -1,43 +1,44 @@
-# Personal Portfolio Website
+# Portfolio Website
 
-A minimalistic, retro-inspired personal portfolio website built with Next.js and Tailwind CSS.
+A modern, responsive portfolio website showcasing my skills, projects, and professional background. Built with a focus on clean design and performance.
 
-## Tech Stack
+## Technologies Used
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
+- **Frontend Framework**: Next.js with React 
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: GitHub Pages (planned: Netlify)
 
-## Getting Started
+## Key Features
 
-First, install dependencies:
-
-```bash
-npm install
-# or
-yarn install
-```
-
-Then, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Responsive design that works on all devices
+- Fast page loads with Next.js optimization
+- Clean, minimalist UI with a retro-inspired aesthetic
+- TypeScript for type safety and better developer experience
+- Component-based architecture for maintainability
 
 ## Project Structure
 
-- `src/components/`: Reusable UI components
-- `src/pages/`: Page components and routes
-- `src/styles/`: Global styles and Tailwind configuration
-- `src/utils/`: Utility functions and helpers
-- `public/`: Static assets
+- `src/components/` - Reusable UI components including layout elements
+- `src/pages/` - Page components for About, Skills, Projects, and Contact
+- `src/styles/` - Global styling and Tailwind configuration
+- `public/` - Static assets and resources
 
-## Future Plans
+## Local Development
 
-- Host on Netlify
-- Add backend functionality
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+The site will be available at [http://localhost:3000](http://localhost:3000)
+
+## Future Enhancements
+
+- Add dark/light mode toggle
+- Add animations and transitions
+- Integrate with a headless CMS
+- Add backend functionality for contact form

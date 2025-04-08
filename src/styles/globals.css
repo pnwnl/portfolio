@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    
+  }
+  
+  body {
+    @apply bg-retro-black text-retro-text font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  /* Custom scrollbar for retro feel */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-retro-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-retro-secondary rounded-sm;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-retro-highlight;
+  }
+  
+  /* DMC3 Themed Scrollbar Buttons */
+  ::-webkit-scrollbar-button {
+    height: 20px;
+    width: 10px;
+  }
+  
+  /* Dante-themed up arrow (top button) */
+  ::-webkit-scrollbar-button:start {
+    background-color: #e94560; /* Dante's red theme */
+    position: relative;
+  }
+  
+  ::-webkit-scrollbar-button:start::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 6px solid #e6e6e6; /* Arrow color */
+  }
+  
+  ::-webkit-scrollbar-button:start:hover {
+    background-color: #ff3040; /* Brighter red on hover */
+  }
+  
+  /* Vergil-themed down arrow (bottom button) */
+  ::-webkit-scrollbar-button:end {
+    background-color: #7b2cbf; /* Vergil's blue/purple theme */
+    position: relative;
+  }
+  
+  ::-webkit-scrollbar-button:end::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 6px solid #e6e6e6; /* Arrow color */
+  }
+  
+  ::-webkit-scrollbar-button:end:hover {
+    background-color: #9133e6; /* Brighter blue/purple on hover */
+  }
+}
+
+/* Custom component classes */
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-soft shadow-retro transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply btn bg-retro-secondary hover:bg-retro-highlight text-retro-text;
+  }
+
+  .btn-secondary {
+    @apply btn bg-retro-primary hover:bg-retro-secondary text-retro-text;
+  }
+
+  .card {
+    @apply bg-retro-primary rounded-soft overflow-hidden shadow-retro hover:shadow-retro-hover transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-2xl font-pixel text-retro-accent mb-8;
+  }
+}
+
+/* Retro terminal effect for code sections */
+.retro-terminal {
+  @apply bg-retro-dark p-4 rounded-soft font-mono text-retro-accent relative overflow-hidden;
+}
+
+.retro-terminal::before {
+  content: "";
+  @apply absolute top-0 left-0 right-0 h-5 bg-retro-primary;
+}
+
+.retro-terminal::after {
+  content: ">";
+  @apply absolute top-0 left-2 text-retro-accent;
+}
+
+/* Pixel animation effect */
+@keyframes pixel-shift {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.pixel-animate {
+  animation: pixel-shift 1.5s infinite ease-in-out;
+} 
